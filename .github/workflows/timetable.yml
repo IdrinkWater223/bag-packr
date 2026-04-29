@@ -1,8 +1,10 @@
 name: Send Timetable
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 12 * * 1-5'
+
 jobs:
   send:
     runs-on: ubuntu-latest
