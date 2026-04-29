@@ -18,7 +18,7 @@ def notify():
     send("https://ntfy.sh/Time_Table", 
         data=notification.encode(encoding="utf-8"), 
         headers={
-            "Title": "📚 Your Time Table for Today",
+            "Title": "Your Time Table for Today",
             "Priority": "urgent"})
 
 if day in timetable:
