@@ -12,4 +12,4 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install requests
-      - run: python timetable.py
+      - run: python main.py
