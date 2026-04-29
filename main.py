@@ -15,7 +15,7 @@ send = requests.post
 
 def notis():
     notification = str(timetable[day]).strip("[]").replace("'", "")
-    send("https://ntfy.sh/Time_Table", 
+    send("Add your own ntfy link", 
         data=notification.encode(encoding="utf-8"), 
         headers={
             "Title": "📚 Your Time Table for Today",
