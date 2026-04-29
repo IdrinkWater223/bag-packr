@@ -13,7 +13,7 @@ timetable = {
 day = dt.now().strftime("%A")
 send = requests.post
 
-def notis():
+def notify():
     notification = str(timetable[day]).strip("[]").replace("'", "")
     send("https://ntfy.sh/Time_Table", 
         data=notification.encode(encoding="utf-8"), 
@@ -22,7 +22,7 @@ def notis():
             "Priority": "urgent"})
 
 if day in timetable:
-    notis()
+    notify()
 else:
     print("No school today")
 
